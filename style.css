@@ -5,14 +5,29 @@ body {
 }
 
 img {
-    height: 40%;
-    width: 40%;
-    
+
 }
 .card {
-    height: 40%;
-    width: 40%;
+
     background-color: #CDD9E9;
     border: #4577A5;
-    border-width: 5px;
+    
 }
+
+#cocktail-list {
+   
+}
+
+#spotlight {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+ }
+ 
+ #spotlight-card {
+    background-color: #4577A5;
+    width: 50vw;
+ }

@@ -67,5 +67,39 @@ function createCocktailCard (name, imageUrl, id) {
     image.src = imageUrl;
     result.appendChild (image);
 
+    result.addEventListener ('click', function () {
+ 
+        var spotlight = createCocktailSpotlight(name, imageUrl, id);
+        document.body.appendChild (spotlight);
+    });
+
+    return result;
+}
+
+function createCocktailSpotlight (name, imageUrl, id) {
+    var result = document.createElement ('div');
+    result.id = 'spotlight'; // defines spotlight id - can be set in css
+
+    var card = document.createElement ('div');
+    card.id= 'spotlight-card';
+
+    var heading = document.createElement ('h1');
+    heading.textContent = name;
+    card.appendChild (heading);
+
+    var image = document.createElement ('img');
+    image.src = imageUrl;
+    card.appendChild (image);
+
+    var instructions = document.createElement ('p');
+    instructions.textContent = "Instructions will go here..."
+    card.appendChild (instructions);
+
+    result.appendChild (card);
+    
+    result.addEventListener ('click', function () {
+        result.remove();
+    });
+
     return result;
 }
